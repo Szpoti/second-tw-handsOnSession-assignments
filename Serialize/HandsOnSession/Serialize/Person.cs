@@ -2,12 +2,11 @@
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
 
 namespace SerializePeople
 {
     [Serializable]
-    public class Person : IDeserializationCallback
+    public class Person : IDeserializationCallback, ISerializable
     {
         private DateTime birthdate = DateTime.Now;
         public string Name { get; private set; }
@@ -16,9 +15,17 @@ namespace SerializePeople
         [NonSerialized]
         public int Age;
 
+        public Person(SerializationInfo info, StreamingContext context)
+        {
+            Name = (string) info.GetValue("Name",typeof(string));
+            birthdate = (DateTime) info.GetValue("Birthdate",typeof(DateTime));
+            gender = (Genders)info.GetValue("Gender", typeof(Genders));
+
+        }
+
         public Person(string name, DateTime birthdate)
         {
-            this.Name = name;
+            Name = name;
             this.birthdate = birthdate;
             OnDeserialization(null);
         }
@@ -74,6 +81,13 @@ namespace SerializePeople
         public void OnDeserialization(object sender)
         {
             this.Age = DateTime.Now.Year - birthdate.Year;
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Name", Name);
+            info.AddValue("Birthdate", birthdate);
+            info.AddValue("Gender", gender);
         }
     }
 }
