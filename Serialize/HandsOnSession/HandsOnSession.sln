@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializePeople", "Serialize\SerializePeople.csproj", "{0CF36A95-0689-43BF-BC70-31F2B4E5BF0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnitTests", "NUnitTests", "{2996D46A-1764-47E3-B425-058A14DE45D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializePeople.Tests", "SerializePeople.Tests\SerializePeople.Tests.csproj", "{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF36A95-0689-43BF-BC70-31F2B4E5BF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF36A95-0689-43BF-BC70-31F2B4E5BF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF36A95-0689-43BF-BC70-31F2B4E5BF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF36A95-0689-43BF-BC70-31F2B4E5BF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61B9E1F3-CE0F-495A-9C8D-4CB0DE486CF3} = {2996D46A-1764-47E3-B425-058A14DE45D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51978C9D-18AA-48F8-B772-9AAB1F3D08AC}
+	EndGlobalSection
+EndGlobal
